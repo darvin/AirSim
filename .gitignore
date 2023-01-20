@@ -403,3 +403,4 @@ PythonClient/docs/_build
 # clangd generated folder, for e.g. from VSCode clangd extension
 .cache/
 .venv
+*.swp
