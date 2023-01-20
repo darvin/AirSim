@@ -43,7 +43,7 @@ if [ "$(uname)" == "Darwin" ]; then # osx
     #brew install llvm@8
     brew install llvm
 else #linux
-    sudo apt-get update
+    sudo apt-get update --allow-insecure-repositories
     sudo apt-get -y install --no-install-recommends \
         lsb-release \
         rsync \
