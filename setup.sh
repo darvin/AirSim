@@ -43,7 +43,9 @@ if [ "$(uname)" == "Darwin" ]; then # osx
     #brew install llvm@8
     brew install llvm
 else #linux
-    sudo apt-get update --allow-insecure-repositories
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-keyring_1.0-1_all.deb
+    sudo dpkg -i cuda-keyring_1.0-1_all.deb
+    sudo apt-get update
     sudo apt-get -y install --no-install-recommends \
         lsb-release \
         rsync \
