@@ -2,7 +2,7 @@ ARG BASE_IMAGE=adamrehn/ue4-engine:4.19.2-cudagl10.0
 FROM $BASE_IMAGE
 
 USER root
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update --allow-insecure-repositories && apt-get install -y --no-install-recommends \
 	rsync \
     sudo \
     wget \
@@ -13,7 +13,7 @@ RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
 
 USER ue4
 RUN cd /home/ue4 && \
-	git clone --progress https://github.com/Microsoft/AirSim.git && \
+	git clone --progress https://github.com/darvin/AirSim.git && \
 	cd AirSim && \
 	./setup.sh && \
 	./build.sh
