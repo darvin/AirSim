@@ -11,7 +11,7 @@
       "EnableCollisions": true,
       "AllowAPIAlways": true,
       "RC": {
-        "RemoteControlID": 0,
+        "RemoteControlID": -1,
         "AllowAPIWhenDisconnected": false
       }
     }
