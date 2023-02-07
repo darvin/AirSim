@@ -62,5 +62,6 @@ $DOCKER_CMD -it \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     -env="XAUTHORITY=$XAUTH" \
     --volume="$XAUTH:$XAUTH" \
+    --volume="$HOME/src:/src"\
     --rm \
     $DOCKER_IMAGE_NAME
